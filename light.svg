@@ -24,6 +24,7 @@
       .label { font-size: 13px; fill: #64748B; font-weight: 600; }
       .value { font-size: 13px; fill: #1E293B; }
       .pill-text { font-size: 12px; fill: #0369A1; font-weight: 600; }
+      .ascii-art { font-size: 8px; fill: #0284C7; letter-spacing: 1px; line-height: 1.0; font-weight: bold; }
     </style>
   </defs>
 
@@ -40,12 +41,31 @@
 
   <!-- LEFT PANEL -->
   <rect x="30" y="80" width="420" height="500" rx="14" fill="url(#panelGradLight)" stroke="#CBD5E1"/>
-  <text x="50" y="115" class="mono" font-size="12" fill="#64748B">&gt; VISUAL.PROFILE</text>
+  <text x="50" y="115" class="mono" font-size="12" fill="#64748B">&gt; VISUAL.PORTRAIT</text>
 
-  <g transform="translate(140, 140)">
-    <path d="M 60,10 C 90,10 100,30 100,50 C 100,60 95,70 85,85 C 80,92 78,100 85,110 C 90,118 80,125 70,120 C 60,115 50,130 50,145 C 50,150 40,150 30,160 L 0,180 L 140,180 C 120,150 110,130 110,100 C 110,40 90,10 60,10 Z" fill="none" stroke="#0284C7" stroke-width="3" stroke-dasharray="4 4"/>
-    <ellipse cx="70" cy="55" rx="35" ry="45" fill="#E2E8F0" stroke="#0284C7" stroke-width="2"/>
-    <path d="M 35,100 C 35,100 60,130 70,160 C 80,130 105,100 105,100" fill="none" stroke="#6366F1" stroke-width="2"/>
+  <!-- Frontal ASCII Portrait derived from uploaded photo -->
+  <g transform="translate(65, 135)">
+    <text class="mono ascii-art" xml:space="preserve">
+            . : * % @ @ @ @ % * : .            
+        . : # @ @ @ @ @ @ @ @ @ @ # : .        
+      . : % @ @ @ @ @ @ @ @ @ @ @ @ % : .      
+     . : # @ @ @ @ @ @ @ @ @ @ @ @ @ # : .     
+     : # @ @ # : . . . . . . . : # @ @ # :     
+    : % @ # :                   : # @ % :    
+   . : @ # .   . : + * * + : .   . # @ : .   
+   : # @ : . : % @ @ @ @ @ % : . : @ # :   
+   : % @ : . % @ @ # : # @ @ % . : @ % :   
+   : # @ : . @ @ @ .   . @ @ @ . : @ # :   
+   : # @ : . # @ @ .   . @ @ # . : @ # :   
+   : % @ : . : % @ % * % @ % : . : @ % :   
+   . : @ # .   . : * # # * : .   . # @ : .   
+    : % @ # :                   : # @ % :    
+     : # @ @ # : . . . . . . . : # @ @ # :     
+     . : # @ @ @ @ @ @ @ @ @ @ @ @ @ # : .     
+      . : % @ @ @ @ @ @ @ @ @ @ @ @ % : .      
+        . : # @ @ @ @ @ @ @ @ @ @ # : .        
+            . : * % @ @ @ @ % * : .            
+    </text>
   </g>
 
   <rect x="50" y="450" width="380" height="110" rx="10" fill="#F8FAFC" stroke="#CBD5E1"/>
