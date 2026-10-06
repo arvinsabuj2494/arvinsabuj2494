@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1180 610" width="1180" height="610" role="img" aria-label="Arvin Sabuj - Software Engineer">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 610" width="1180" height="610" role="img" aria-label="Arvin Sabuj Portfolio">
   <defs>
     <!-- Dynamic Glowing Gradients -->
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -19,21 +19,20 @@
       <stop offset="100%" stop-color="#0F172A"/>
     </linearGradient>
 
-    <clipPath id="avatarClip">
-      <rect x="70" y="140" width="340" height="290" rx="16"/>
-    </clipPath>
+    <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
 
     <style>
       .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
-      
-      /* Glowing Text Effects */
       .title { font-size: 32px; font-weight: 800; fill: #F8FAFC; letter-spacing: -0.5px; }
       .sub { font-size: 16px; font-weight: 700; fill: #38BDF8; }
       .label { font-size: 13px; font-weight: 700; fill: #818CF8; }
       .value { font-size: 13px; font-weight: 500; fill: #F1F5F9; }
-      .pill-text { font-size: 12px; font-weight: 700; fill: #38BDF8; }
+      .pill-text { font-size: 12px; font-weight: 700; fill: #F8FAFC; }
 
-      /* SMIL Fallback & Animations */
+      /* SMIL Animation Fallback Styles */
       @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
       .cursor { animation: blink 1s infinite; fill: #38BDF8; }
 
@@ -44,20 +43,13 @@
       .float-1 { animation: floatPill 3s ease-in-out infinite; }
       .float-2 { animation: floatPill 4s ease-in-out infinite 0.5s; }
       .float-3 { animation: floatPill 3.5s ease-in-out infinite 1s; }
-
-      @keyframes scanline {
-        0% { transform: translateY(0px); opacity: 0; }
-        50% { opacity: 0.5; }
-        100% { transform: translateY(280px); opacity: 0; }
-      }
-      .scan { animation: scanline 4s linear infinite; }
     </style>
   </defs>
 
-  <!-- Background -->
+  <!-- Main Frame Background -->
   <rect width="1180" height="610" rx="20" fill="url(#bgGrad)" stroke="#1E293B" stroke-width="2"/>
 
-  <!-- Glowing Border Animation -->
+  <!-- Animated Glowing Outer Border -->
   <rect x="2" y="2" width="1176" height="606" rx="18" fill="none" stroke="url(#neonGrad)" stroke-width="2" opacity="0.6">
     <animate attributeName="opacity" values="0.3;0.8;0.3" dur="4s" repeatCount="indefinite"/>
   </rect>
@@ -77,17 +69,30 @@
     <text x="28" y="16" class="mono" font-size="11" fill="#34D399" font-weight="bold">SYSTEM OK</text>
   </g>
 
-  <!-- LEFT PANEL - PORTRAIT -->
+  <!-- LEFT PANEL - PORTRAIT CARD -->
   <rect x="30" y="80" width="420" height="500" rx="14" fill="#0B132B" stroke="#1E293B" opacity="0.9"/>
   <text x="50" y="115" class="mono" font-size="12" fill="#38BDF8" font-weight="bold">&gt; SYSTEM.USER_AVATAR</text>
 
-  <!-- Real HD Photo Container with Cyber Glow -->
-  <g>
-    <rect x="68" y="138" width="344" height="294" rx="18" fill="none" stroke="url(#neonGrad)" stroke-width="3"/>
-    <image xlink:href="./photo.png" x="70" y="140" width="340" height="290" preserveAspectRatio="xMidYMin slice" clip-path="url(#avatarClip)"/>
+  <!-- High-Precision Vector Stylized Portrait with Cyber Glow -->
+  <g transform="translate(70, 138)">
+    <rect width="340" height="290" rx="16" fill="url(#avatarGrad)" stroke="url(#neonGrad)" stroke-width="2"/>
     
-    <!-- Animated Scanline over Photo -->
-    <rect class="scan" x="70" y="140" width="340" height="4" fill="#38BDF8" clip-path="url(#avatarClip)"/>
+    <!-- Stylized Developer Silhouette Art -->
+    <g transform="translate(70, 30)">
+      <!-- Head & Hair -->
+      <path d="M 100,10 C 60,10 40,40 38,70 C 35,80 32,90 30,100 C 25,120 30,140 35,150 C 40,160 50,165 55,175 C 60,185 55,195 65,205 C 75,215 90,220 100,220 C 110,220 125,215 135,205 C 145,195 140,185 145,175 C 150,165 160,160 165,150 C 170,140 175,120 170,100 C 168,90 165,80 162,70 C 160,40 140,10 100,10 Z" fill="#020617" stroke="#38BDF8" stroke-width="2.5"/>
+      <!-- Hair Details -->
+      <path d="M 40,60 C 60,30 100,25 130,30 C 150,35 160,50 160,70 C 140,50 110,45 80,50 C 60,53 45,60 40,60 Z" fill="#38BDF8" opacity="0.8"/>
+      <!-- Beard Outline -->
+      <path d="M 55,150 C 65,185 80,205 100,205 C 120,205 135,185 145,150 C 130,175 115,185 100,185 C 85,185 70,175 55,150 Z" fill="#818CF8"/>
+      <!-- Suit & Collar -->
+      <path d="M 20,230 L 60,190 L 80,220 L 100,195 L 120,220 L 140,190 L 180,230 L 200,230 C 180,200 150,180 140,175 L 100,210 L 60,175 C 50,180 20,200 0,230 Z" fill="#1E293B" stroke="#C084FC" stroke-width="2"/>
+    </g>
+
+    <!-- Scanning Line Effect -->
+    <line x1="10" y1="20" x2="330" y2="20" stroke="#38BDF8" stroke-width="2" opacity="0.7">
+      <animateTransform attributeName="transform" type="translate" from="0,0" to="0,250" dur="3s" repeatCount="indefinite"/>
+    </line>
   </g>
 
   <!-- Status Box -->
@@ -99,7 +104,6 @@
   <!-- RIGHT PANEL - SYSTEM INFO -->
   <rect x="470" y="80" width="680" height="500" rx="14" fill="#0B132B" stroke="#1E293B" opacity="0.9"/>
   
-  <!-- Animated Title -->
   <text x="500" y="130" class="mono title">Arvin Sabuj</text>
   <text x="500" y="160" class="mono sub">&gt; Full-Stack Software Engineer</text>
   <rect x="500" y="175" width="620" height="2" fill="url(#neonGrad)"/>
@@ -108,12 +112,12 @@
   <g transform="translate(500, 205)">
     <g transform="translate(0, 0)">
       <text x="0" y="15" class="mono label">&gt; ROLE</text>
-      <text x="140" y="15" class="mono value" fill="#F8FAFC">Software Engineer &amp; Full-Stack Builder</text>
+      <text x="140" y="15" class="mono value">Software Engineer &amp; Full-Stack Builder</text>
     </g>
 
     <g transform="translate(0, 35)">
       <text x="0" y="15" class="mono label">&gt; EDUCATION</text>
-      <text x="140" y="15" class="mono value" fill="#F8FAFC">B.S. Computer Science @ UMGC</text>
+      <text x="140" y="15" class="mono value">B.S. Computer Science @ UMGC</text>
     </g>
 
     <g transform="translate(0, 70)">
@@ -123,72 +127,70 @@
 
     <g transform="translate(0, 105)">
       <text x="0" y="15" class="mono label">&gt; FOCUS</text>
-      <text x="140" y="15" class="mono value" fill="#F8FAFC">Web Applications, Microservices &amp; REST APIs</text>
+      <text x="140" y="15" class="mono value">Web Applications, Microservices &amp; REST APIs</text>
     </g>
   </g>
 
-  <!-- Animated Tech Stack Pills -->
+  <!-- Tech Stack Pills -->
   <text x="500" y="365" class="mono" font-size="14" fill="#F8FAFC" font-weight="bold">&gt; TECH_STACK_MODULES</text>
   
   <g transform="translate(500, 385)">
-    <!-- Row 1 -->
     <g class="float-1">
       <rect x="0" y="0" width="115" height="34" rx="8" fill="url(#pillGrad)" stroke="#38BDF8" stroke-width="1.5"/>
       <circle cx="15" cy="17" r="4" fill="#F7DF1E"/>
-      <text x="26" y="22" class="mono pill-text" fill="#F8FAFC">JavaScript</text>
+      <text x="26" y="22" class="mono pill-text">JavaScript</text>
     </g>
 
     <g class="float-2">
       <rect x="125" y="0" width="115" height="34" rx="8" fill="url(#pillGrad)" stroke="#3178C6" stroke-width="1.5"/>
       <circle cx="140" cy="17" r="4" fill="#3178C6"/>
-      <text x="151" y="22" class="mono pill-text" fill="#F8FAFC">TypeScript</text>
+      <text x="151" y="22" class="mono pill-text">TypeScript</text>
     </g>
 
     <g class="float-3">
       <rect x="250" y="0" width="95" height="34" rx="8" fill="url(#pillGrad)" stroke="#61DAFB" stroke-width="1.5"/>
       <circle cx="265" cy="17" r="4" fill="#61DAFB"/>
-      <text x="276" y="22" class="mono pill-text" fill="#F8FAFC">React</text>
+      <text x="276" y="22" class="mono pill-text">React</text>
     </g>
 
     <g class="float-1">
       <rect x="355" y="0" width="95" height="34" rx="8" fill="url(#pillGrad)" stroke="#339933" stroke-width="1.5"/>
       <circle cx="370" cy="17" r="4" fill="#339933"/>
-      <text x="381" y="22" class="mono pill-text" fill="#F8FAFC">Node.js</text>
+      <text x="381" y="22" class="mono pill-text">Node.js</text>
     </g>
 
     <g class="float-2">
       <rect x="460" y="0" width="95" height="34" rx="8" fill="url(#pillGrad)" stroke="#3776AB" stroke-width="1.5"/>
       <circle cx="475" cy="17" r="4" fill="#3776AB"/>
-      <text x="486" y="22" class="mono pill-text" fill="#F8FAFC">Python</text>
+      <text x="486" y="22" class="mono pill-text">Python</text>
     </g>
 
-    <!-- Row 2 -->
     <g class="float-3" transform="translate(0, 44)">
       <rect x="0" y="0" width="105" height="34" rx="8" fill="url(#pillGrad)" stroke="#06B6D4" stroke-width="1.5"/>
       <circle cx="15" cy="17" r="4" fill="#06B6D4"/>
-      <text x="26" y="22" class="mono pill-text" fill="#F8FAFC">Tailwind</text>
+      <text x="26" y="22" class="mono pill-text">Tailwind</text>
     </g>
 
     <g class="float-1" transform="translate(0, 44)">
       <rect x="115" y="0" width="125" height="34" rx="8" fill="url(#pillGrad)" stroke="#4169E1" stroke-width="1.5"/>
       <circle cx="130" cy="17" r="4" fill="#4169E1"/>
-      <text x="141" y="22" class="mono pill-text" fill="#F8FAFC">PostgreSQL</text>
+      <text x="141" y="22" class="mono pill-text">PostgreSQL</text>
     </g>
 
     <g class="float-2" transform="translate(0, 44)">
       <rect x="250" y="0" width="85" height="34" rx="8" fill="url(#pillGrad)" stroke="#F05032" stroke-width="1.5"/>
       <circle cx="265" cy="17" r="4" fill="#F05032"/>
-      <text x="276" y="22" class="mono pill-text" fill="#F8FAFC">Git</text>
+      <text x="276" y="22" class="mono pill-text">Git</text>
     </g>
 
     <g class="float-3" transform="translate(0, 44)">
       <rect x="345" y="0" width="115" height="34" rx="8" fill="url(#pillGrad)" stroke="#A855F7" stroke-width="1.5"/>
       <circle cx="360" cy="17" r="4" fill="#A855F7"/>
-      <text x="371" y="22" class="mono pill-text" fill="#F8FAFC">REST API</text>
+      <text x="371" y="22" class="mono pill-text">REST API</text>
     </g>
   </g>
 
-  <!-- Interactive Terminal Prompt Line -->
+  <!-- Interactive Terminal Prompt -->
   <g transform="translate(500, 525)">
     <text x="0" y="0" class="mono" font-size="14" fill="#38BDF8" font-weight="bold">&gt; arvin.initEngine()</text>
     <rect x="180" y="-12" width="10" height="16" class="cursor"/>
